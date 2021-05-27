@@ -19,7 +19,7 @@ Register the service provider in app.php
 ```php
 'providers' => [
     // ...
-    Exula\Ceph\CephStorageServiceProvider::class,
+    Imrantune\Ceph\CephStorageServiceProvider::class,
 ]
 ```
 
