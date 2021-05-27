@@ -9,9 +9,9 @@ ___
 ## Installation
 
 ```bash
-composer require exula/laravel-storage-rados-s3
+composer require imrantune/laravel-storage-rados-s3
 ```
-Package should be auto discovered by Laravel 5.5
+Package should be auto discovered by Laravel 6x
 
 OR
 
@@ -26,16 +26,18 @@ Register the service provider in app.php
 Add a new disk to your `config/filesystems.php` config:
  ```php
 'ceph' => [
-            'base_url' => env('CEPH_BASE_URL', 'xxxxxxxxx'),
+            'base_url' => env('CEPH_BASE_URL', 'https://s3.tune.pk'),
             'driver' => 'ceph',
-            'key' => env('CEPH_ACCESS_KEY', 'xxxxxxx'),
+            'key' => env('CEPH_ACCESS_KEY', 'xxxxxxxxxx'),
             'credentials' => [
-                'key' => env('CEPH_ACCESS_KEY', 'xxxxxxx'),
-                'secret' => env('CEPH_SECRET_KEY', 'xxxxxxx'),
-                ],
+                'key' => env('CEPH_ACCESS_KEY', 'xxxxxxxxxx'),
+                'secret' => env('CEPH_SECRET_KEY', 'xxxxxxxxxxxxxxxxxxxxxxxxxx'),
+            ],
             'region' => '',
-            'bucket' => env('CEPH_BUCKET', 'test'),
-            'version' => 'latest'
+            'bucket' => env('CEPH_BUCKET', 's3-bucket'),
+            'version' => env('CEPH_VERSION', 'latest'),
+            'ACL' => env('CEPH_ACL', 'private'), //private,'public-read',
+            'visibility' => env('CEPH_VISIBILITY', 'private')
         ],
 ```
 
@@ -46,6 +48,9 @@ CEPH_BASE_URL=
 CEPH_ACCESS_KEY=
 CEPH_SECRET_KEY=
 CEPH_BUCKET=
+CEPH_VERSION=
+CEPH_ACL=
+CEPH_VISIBILITY=
 
 ```
 
