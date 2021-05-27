@@ -1,5 +1,5 @@
 {
-    "name": "exula/laravel-storage-rados-s3",
+    "name": "imrantune/laravel-storage-rados-s3",
     "description": "Extends League Flysystem S3 Adapter to easily point it to a Rados Gateway",
     "license": "MIT",
     "authors": [
@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Exula\\Ceph\\CephStorageServiceProvider"
+                "Imrantune\\Ceph\\CephStorageServiceProvider"
             ]
         }
     }
