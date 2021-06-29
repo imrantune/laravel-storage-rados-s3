@@ -56,5 +56,5 @@ CEPH_VISIBILITY=
 
 
 ## Usage
-Once installed this can be used as any standard Storage driver for Laravel 5.5
-https://laravel.com/docs/5.5/filesystem
+Once installed this can be used as any standard Storage driver for Laravel 6.x
+https://laravel.com/docs/6.x/filesystem
